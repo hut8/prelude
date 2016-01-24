@@ -5,3 +5,4 @@
 (set-default 'truncate-lines t)
 (global-set-key (kbd "C-^") 'mc/edit-lines)
 (setq magit-push-always-verify nil)
+(setq prelude-flyspell nil)
