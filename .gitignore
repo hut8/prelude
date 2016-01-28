@@ -23,4 +23,5 @@ tramp
 /var/pcache
 mc-lists.el
 .mc-lists.el
+ac-comphist.dat
 
