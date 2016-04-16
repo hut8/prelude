@@ -23,6 +23,8 @@
 (editorconfig-mode 1)
 (add-hook 'web-mode-hook
           (lambda () (whitespace-mode -1)))
+(add-hook 'c-mode-hook
+          (lambda () (whitespace-mode -1)))
 
 (provide 'init)
 
