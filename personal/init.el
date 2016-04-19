@@ -29,19 +29,23 @@
   (setq indent-tabs-mode t)
   (setq whitespace-tab nil))
 
-(add-hook 'web-mode-hook
-          (lambda () (whitespace-mode -1)))
-(defun my-gfm-mode-hook ()
-  "Enable 'visual-line-mode' and not 'whitespace-mode'."
-  (visual-line-mode 1)
-  (whitespace-mode 0))
-(add-hook 'gfm-mode-hook 'my-gfm-mode-hook)
-
 ;; Web
 (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
 (setq web-mode-engines-alist
       '(("erb"    . "\\.erb\\'")
         ("elixir"    . "\\.eex\\'")))
+(add-hook 'c-mode-hook
+          (lambda () (whitespace-mode -1)))
+(add-hook 'gfm-mode-hook
+          (lambda ()
+            (whitespace-mode -1)
+            (visual-line-mode 1)))
+
+;; So gnutls can find trustfiles on windows
+(eval-after-load "gnutls"
+  '(progn
+     (setq gnutls-trustfiles '("C:/MSYS64/usr/ssl/certs/ca-bundle.trust.crt"
+                               "C:/MSYS64/usr/ssl/certs/ca-bundle.crt"))))
 
 (provide 'init)
 
