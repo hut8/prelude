@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; this linter is very pedantic
 ;;; Code:
-(prelude-require-packages '(multiple-cursors))
+(prelude-require-packages
+ '(multiple-cursors nginx-mode))
 (set-default 'truncate-lines t)
 (global-set-key (kbd "C-^") 'mc/edit-lines)
 (defvar magit-push-always-verify)
