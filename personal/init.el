@@ -23,8 +23,11 @@
 (editorconfig-mode 1)
 (add-hook 'web-mode-hook
           (lambda () (whitespace-mode -1)))
-(add-hook 'c-mode-hook
-          (lambda () (whitespace-mode -1)))
+(defun my-gfm-mode-hook ()
+  "Enable 'visual-line-mode' and not 'whitespace-mode'."
+  (visual-line-mode 1)
+  (whitespace-mode 0))
+(add-hook 'gfm-mode-hook 'my-gfm-mode-hook)
 
 (provide 'init)
 
