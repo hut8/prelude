@@ -12,13 +12,12 @@
 (defvar org-html-doctype)
 (defvar prelude-guru)
 (defvar prelude-flyspell)
-
+(defvar web-mode-engines-alist)
+(setq auto-save-default nil)
 (setq magit-push-always-verify nil)
-
 (setq org-agenda-files '("~/Dropbox/org"))
 (setq org-log-done t)
 (setq org-html-doctype "html5")
-
 (setq prelude-guru nil)
 (setq prelude-flyspell nil)
 (editorconfig-mode 1)
@@ -29,6 +28,9 @@
   (visual-line-mode 1)
   (whitespace-mode 0))
 (add-hook 'gfm-mode-hook 'my-gfm-mode-hook)
+
+(setq web-mode-engines-alist
+      '(("erb"    . "\\.erb\\'")))
 
 (provide 'init)
 
