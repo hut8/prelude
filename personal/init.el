@@ -26,7 +26,8 @@
 (add-hook 'php-mode-hook 'my-php-mode-hook)
 (defun my-php-mode-hook ()
   "PHP is terrible."
-  (setq indent-tabs-mode t))
+  (setq indent-tabs-mode t)
+  (setq whitespace-tab nil))
 
 (add-hook 'web-mode-hook
           (lambda () (whitespace-mode -1)))
