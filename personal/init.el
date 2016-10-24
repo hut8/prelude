@@ -36,8 +36,11 @@
   (whitespace-mode 0))
 (add-hook 'gfm-mode-hook 'my-gfm-mode-hook)
 
+;; Web
+(add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
 (setq web-mode-engines-alist
-      '(("erb"    . "\\.erb\\'")))
+      '(("erb"    . "\\.erb\\'")
+        ("elixir"    . "\\.eex\\'")))
 
 (provide 'init)
 
