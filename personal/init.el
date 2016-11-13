@@ -12,6 +12,7 @@
 (defvar org-html-doctype)
 (defvar prelude-guru)
 (defvar prelude-flyspell)
+(defvar projectile-indexing-method)
 (defvar web-mode-engines-alist)
 (setq auto-save-default nil)
 (setq magit-push-always-verify nil)
@@ -20,6 +21,7 @@
 (setq org-html-doctype "html5")
 (setq prelude-guru nil)
 (setq prelude-flyspell nil)
+(setq projectile-indexing-method 'alien)
 (setq tab-width 4)
 (editorconfig-mode 1)
 
