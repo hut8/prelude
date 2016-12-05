@@ -13,6 +13,7 @@
 (defvar prelude-guru)
 (defvar prelude-flyspell)
 (defvar web-mode-engines-alist)
+(defvar prelude-clean-whitespace-on-save)
 (setq auto-save-default nil)
 (setq magit-push-always-verify nil)
 (setq org-agenda-files '("~/org"))
@@ -23,11 +24,11 @@
 (setq tab-width 4)
 (editorconfig-mode 1)
 
-(add-hook 'php-mode-hook 'my-php-mode-hook)
-(defun my-php-mode-hook ()
-  "PHP is terrible."
-  (setq indent-tabs-mode t)
-  (setq whitespace-tab nil))
+;; (add-hook 'php-mode-hook 'my-php-mode-hook)
+;; (defun my-php-mode-hook ()
+;;   "PHP is terrible."
+;;   (setq indent-tabs-mode t)
+;;   (setq whitespace-tab nil))
 
 ;; Web
 (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
@@ -46,6 +47,8 @@
   '(progn
      (setq gnutls-trustfiles '("C:/MSYS64/usr/ssl/certs/ca-bundle.trust.crt"
                                "C:/MSYS64/usr/ssl/certs/ca-bundle.crt"))))
+
+; (setq prelude-clean-whitespace-on-save nil)
 
 (provide 'init)
 
