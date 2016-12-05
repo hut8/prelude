@@ -26,4 +26,6 @@ mc-lists.el
 ac-comphist.dat
 /anaconda-mode
 /server
+.emacs.desktop
+.emacs.desktop.lock
 
