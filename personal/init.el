@@ -22,6 +22,8 @@
 (setq prelude-guru nil)
 (setq prelude-flyspell nil)
 (setq tab-width 4)
+;; Don't make interlock symlinks
+(setq create-lockfiles nil)
 (editorconfig-mode 1)
 
 ;; (add-hook 'php-mode-hook 'my-php-mode-hook)
