@@ -44,13 +44,15 @@
             (whitespace-mode -1)
             (visual-line-mode 1)))
 
+;; (setq prelude-clean-whitespace-on-save nil)
+
 ;; So gnutls can find trustfiles on windows
 (eval-after-load "gnutls"
   '(progn
      (setq gnutls-trustfiles '("C:/MSYS64/usr/ssl/certs/ca-bundle.trust.crt"
                                "C:/MSYS64/usr/ssl/certs/ca-bundle.crt"))))
 
-; (setq prelude-clean-whitespace-on-save nil)
+(add-to-list 'elixir-mode-hook 'alchemist-mode)
 
 (provide 'init)
 
