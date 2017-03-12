@@ -52,8 +52,6 @@
      (setq gnutls-trustfiles '("C:/MSYS64/usr/ssl/certs/ca-bundle.trust.crt"
                                "C:/MSYS64/usr/ssl/certs/ca-bundle.crt"))))
 
-(add-to-list 'elixir-mode-hook 'alchemist-mode)
-
 (provide 'init)
 
 ;;; init.el ends here
